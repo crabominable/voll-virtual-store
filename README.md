@@ -4,10 +4,12 @@
 
 - Plataforma para controle de pontos com loja virtual
   
-### Prerequisites
+### Pré requisitos
 
 - Node
+
   ou
+
 - Docker
 
 ### Recursos
