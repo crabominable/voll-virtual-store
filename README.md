@@ -7,9 +7,7 @@
 ### Pré requisitos
 
 - Node
-
   ou
-
 - Docker
 
 ### Recursos
