@@ -1,9 +1,11 @@
 const domainError = require('./domain.error');
-const validateJoi = require('./validateJoi');
+const validateSchema = require('./validateSchema');
 const authenticator = require('./authenticator');
+const jwtError = require('./jwt.error');
 
 module.exports = {
   authenticator,
   domainError,
-  validateJoi,
+  validateSchema,
+  jwtError,
 };

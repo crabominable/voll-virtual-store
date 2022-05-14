@@ -13,7 +13,7 @@ const sign = (payload) =>
 const verifyToken = (token) => 
     jwt.verify(token, secret, { algorithms: ['HS256'] });
 
-  module.exports = {
-    sign,
-    verifyToken,
-  };
+module.exports = {
+  sign,
+  verifyToken,
+};

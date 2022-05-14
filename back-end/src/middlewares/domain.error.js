@@ -5,6 +5,7 @@ const errorMap = {
   conflict: 409,
 };
 
+// eslint-disable-next-line no-unused-vars
 const domainError = (err, _req, res, _next) => {
   const status = errorMap[err.code];
 

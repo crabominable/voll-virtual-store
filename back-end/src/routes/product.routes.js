@@ -2,15 +2,15 @@ const { Router } = require('express');
 
 const { productController } = require('../controllers');
 const { productSchema } = require('../utils/schemas');
-const { validateJoi } = require('../middlewares');
+const { validateSchema } = require('../middlewares');
 const { authenticator } = require('../middlewares');
 
 const productRoute = Router();
 
 productRoute.post(
   '/',
-  authenticator('seller'),
-  validateJoi(productSchema), 
+  authenticator('administrator'),
+  validateSchema(productSchema), 
   productController.create,
 );
 
@@ -18,11 +18,11 @@ productRoute.get('/', productController.read);
 
 productRoute.put(
   '/:id',
-  authenticator('seller'),
-  validateJoi(productSchema),
+  authenticator('administrator'),
+  validateSchema(productSchema),
   productController.update,
 );
 
-productRoute.delete('/:id', authenticator('seller'), productController.remove);
+productRoute.delete('/:id', authenticator('administrator'), productController.remove);
 
 module.exports = productRoute;

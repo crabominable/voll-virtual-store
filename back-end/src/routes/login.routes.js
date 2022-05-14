@@ -2,10 +2,10 @@ const { Router } = require('express');
 
 const { authController } = require('../controllers');
 const { loginSchema } = require('../utils/schemas');
-const { validateJoi } = require('../middlewares');
+const { validateSchema } = require('../middlewares');
 
 const loginRoute = Router();
 
-loginRoute.post('/', validateJoi(loginSchema), authController.login);
+loginRoute.post('/', validateSchema(loginSchema), authController.login);
 
 module.exports = loginRoute;

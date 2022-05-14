@@ -8,11 +8,12 @@ const {
   loginRoute,
   registerRoute,
   productRoute,
+  walletRoute,
 } = require('../routes');
 
 const {
   domainError,
-  jwtDomainError,
+  jwtError,
 } = require('../middlewares');
 
 const app = express();
@@ -26,8 +27,9 @@ app.use(bodyParser.json());
 app.use('/login', loginRoute);
 app.use('/register', registerRoute);
 app.use('/products', productRoute);
+app.use('/wallets', walletRoute);
 
-app.use(jwtDomainError);
+app.use(jwtError);
 app.use(domainError);
 
 module.exports = app;
